@@ -5,9 +5,13 @@ public class Planet : MonoBehaviour {
 	public GameObject player;
 	public float gravityStrength = 1;
 
-	private Vector3 gravityVec;
 	void FixedUpdate () {
-		gravityVec = this.transform.position - player.transform.position;
-		player.rigidbody.AddForce (gravityVec.normalized * gravityStrength/gravityVec.sqrMagnitude);
+		player.rigidbody.AddForce ( GetGravity (player.transform.position) );
+	}
+
+	public Vector3 GetGravity (Vector3 pos)
+	{
+		Vector3 gVec = this.transform.position - pos;
+		return gVec.normalized * gravityStrength / gVec.sqrMagnitude;
 	}
 }

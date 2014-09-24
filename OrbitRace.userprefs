@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PredictorController.cs">
     <Files>
-      <File FileName="Assets\Scripts\Planet.cs" Line="11" Column="93" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="25" Column="117" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="44" Column="2" />
+      <File FileName="Assets\Scripts\Planet.cs" Line="12" Column="9" />
+      <File FileName="Assets\Scripts\PredictorController.cs" Line="12" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
