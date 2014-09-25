@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PredictorController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GravityController.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="44" Column="2" />
-      <File FileName="Assets\Scripts\Planet.cs" Line="12" Column="9" />
-      <File FileName="Assets\Scripts\PredictorController.cs" Line="12" Column="35" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="72" Column="1" />
+      <File FileName="Assets\Scripts\PredictorController.cs" Line="20" Column="1" />
+      <File FileName="Assets\Scripts\GravityController.cs" Line="30" Column="7" />
+      <File FileName="Assets\Scripts\GravityComponent.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
