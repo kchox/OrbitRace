@@ -20,20 +20,20 @@ public class PlayerController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		// W/S keys or Up/Down arrows to increase/decrease magnitude of current velocity
+		// W/S keys or Up/Down arrows to increase/decrease radial velocity
+		//   relative to closest Planet
 		float moveV = Input.GetAxis("Vertical");
-		Vector3 movement = rigidbody.velocity.normalized;
-		
+		Vector3 movement = (this.transform.position - target.transform.position).normalized;
 		rigidbody.AddForce(movement * speed1 * moveV * Time.deltaTime);
 
 		// A/D keys or Left/Right arrows to increase/decrease tangential velocity
 		//   relative to closest Planet
 		float moveH = Input.GetAxis("Horizontal");
 		Vector3 movement2 = Vector3.Cross(this.transform.position - target.transform.position, new Vector3(0, 0, 1)).normalized;
+		rigidbody.AddForce(movement2 * speed2 * moveH * Time.deltaTime);
+		
 		Debug.DrawLine(this.transform.position, target.transform.position);
 		Debug.DrawRay(this.transform.position, movement2);
-		
-		rigidbody.AddForce(movement2 * speed2 * moveH * Time.deltaTime);
 	}
 
 	void ScanForTarget()

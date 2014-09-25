@@ -27,19 +27,22 @@ public class GravityController: MonoBehaviour
 		rigidbodyList.Remove (rb);
 	}
 	
-	void CalculateGravity(Rigidbody rb)
+	public static Vector3 CalculateGravity(Vector3 pos)
 	{
+		Vector3 grav = Vector3.zero;
 		foreach (GravityComponent gc in gravityList)
 		{
-			rb.AddForce (gc.GetGravity(rb.transform.position));
+			grav += gc.GetGravity(pos);
 		}
+		return grav;
 	}
 	
 	void FixedUpdate()
 	{
 		foreach (Rigidbody target in rigidbodyList)
 		{
-			CalculateGravity(target);
+			Vector3 grav = CalculateGravity(target.transform.position);
+			target.AddForce(grav);
 		}
 	}
 }
